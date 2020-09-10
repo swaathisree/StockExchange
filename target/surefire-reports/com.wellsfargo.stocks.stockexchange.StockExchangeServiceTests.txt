@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.wellsfargo.stocks.stockexchange.StockExchangeServiceTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.015 s <<< FAILURE! - in com.wellsfargo.stocks.stockexchange.StockExchangeServiceTests
+getCompaniesListTest  Time elapsed: 0.048 s  <<< ERROR!
+org.mockito.exceptions.misusing.WrongTypeOfReturnValue: 
+
+Company cannot be returned by findById()
+findById() should return Exchange
+***
+If you're unsure why you're getting above error read on.
+Due to the nature of the syntax above problem might occur because:
+1. This exception *might* occur in wrongly written multi-threaded tests.
+   Please refer to Mockito FAQ on limitations of concurrency testing.
+2. A spy is stubbed using when(spy.foo()).then() syntax. It is safer to stub spies - 
+   - with doReturn|Throw() family of methods. More in javadocs for Mockito.spy() method.
+
+	at com.wellsfargo.stocks.stockexchange.StockExchangeServiceTests.getCompaniesListTest(StockExchangeServiceTests.java:83)
+
