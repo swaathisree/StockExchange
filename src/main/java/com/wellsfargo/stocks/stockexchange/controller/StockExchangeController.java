@@ -17,8 +17,8 @@ import com.wellsfargo.stocks.stockexchange.entity.Exchange;
 import com.wellsfargo.stocks.stockexchange.service.StockExchangeService;
 import com.wellsfargo.stocks.stockexchange.service.StockExchangeServiceImpl;
 
-@CrossOrigin
 @RestController
+@CrossOrigin(origins = "*")
 public class StockExchangeController {
 	
 	private StockExchangeService stockExchangeService;
